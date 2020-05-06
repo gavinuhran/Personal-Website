@@ -1,5 +1,5 @@
 body {
-    background-color: #f8f8f8!important
+    background-color: #f8f8f8!important;
 }
 
 .topnav {
@@ -48,4 +48,95 @@ ul {
 .social {
     width: 40px;
     height: 40px;
+}
+.social:hover {
+    border: 2px solid #ffffff;
+}
+
+.repo-icon {
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
+}
+
+.project-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 8%;
+    grid-row-gap: 0;
+    align-items: center;
+    justify-items: center;
+    grid-template-areas:
+        "header header header"
+        "project1 project2 project3"
+        "footer footer footer";
+}
+
+.projects-header {
+    grid-area: header;
+}
+.projects-header h4 {
+    font-size: 28px;
+}
+.project-link {
+    color: black;
+}
+.project-link:hover {
+    color: black;
+    text-decoration: none;
+}
+.project-container {
+    grid-area: project1;
+    display: grid;
+    grid-template-areas:
+        "image"
+        "title"
+        "lang"
+        "desc";
+    grid-template-rows: 275px 32px 24px 150px;
+    grid-row-gap: 2%;
+    justify-items: center;
+    border: 2px solid #ffffff;
+    padding: 5%;
+}
+.project-container:hover {
+    background-color: #edf2f4;
+    border-radius: 30px;
+    border: 2px solid #8d99ae;
+}
+.project1 {
+    grid-area: project1;
+}
+.project2 {
+    grid-area: project2;
+}
+.project3 {
+    grid-area: project3;
+}
+.project-image {
+    grid-area: image;
+}
+.project-title {
+    grid-area: title;
+}
+.project-title h5 {
+    font-size: 24px;
+}
+.project-lang {
+    grid-area: lang;
+}
+.project-lang h6 {
+    font-size: 16px;
+    font-style: italic;
+}
+.project-desc {
+    grid-area: desc;
+}
+
+footer {
+    padding-bottom: 1%;
+    text-align: center;
+}
+.footer-text {
+    font-size: 16px;
 }

@@ -11,17 +11,17 @@
 </head>
 <body>
     <div class="container">
-        <div class="row">
+        <div id="top" class="row">
             <div class="col-md-12">
                 <div class="topnav">
-                    <a href="#profile-wrapper" class="active">Home</a>
+                    <a href="#profile-wrapper" class="active"><strong>Gavin Uhran's Portfolio</strong></a>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-3">
                 <div id="profile-wrapper" class="card card-body h-100">
-                    <img id="profile-pic" src="{% static 'images/headshot.jpg' %}">
+                    <img id="profile-pic" src="{% static 'images/headshot.jpg' %}" alt="Profile Picture">
                     <hr>
                     <h4>Gavin Uhran</h4>
                     <p>19 y/o Computer Science major at the University of Notre Dame</p>
@@ -37,32 +37,106 @@
                     <p>My strengths are collaboration, problem-solving, discipline, and determination to improve. These attributes have been built through my studies, past experience, involvement in drumline, and the process of earning my Eagle Scout rank in Boy Scouts. I am excited to put my full effort into a career in software engineering!</p>
                     <h4>Socials</h4>
                     <hr>
-                        <ul class="social-links">
-                            <li>
-                                <a href="https://linkedin.com/in/gavinuhran" target="_blank">
-                                    <img class="social" src="{% static 'images/mediaFiles/linkedin.png' %}">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://twitter.com/gavinuhran" target="_blank">
-                                    <img class="social" src="{% static 'images/mediaFiles/twitter.png' %}">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://instagram.com/gavinuhran" target="_blank">
-                                    <img class="social" src="{% static 'images/mediaFiles/instagram.png' %}">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/gavinuhran" target="_blank">
-                                    <img class="social" src="{% static 'images/mediaFiles/github.png' %}">
-                                </a>
-                            </li>
-                        </ul>
+                    <ul class="social-links">
+                        <li>
+                            <a href="https://linkedin.com/in/gavinuhran" target="_blank">
+                                <img class="social" src="{% static 'images/mediaFiles/linkedin.png' %}" alt="LinkedIn Icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/gavinuhran" target="_blank">
+                                <img class="social" src="{% static 'images/mediaFiles/twitter.png' %}" alt="Twitter Icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com/gavinuhran" target="_blank">
+                                <img class="social" src="{% static 'images/mediaFiles/instagram.png' %}" alt="Instagram Icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/gavinuhran" target="_blank">
+                                <img class="social" src="{% static 'images/mediaFiles/github.png' %}" alt="Github Icon">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-body h-100">
+                    <div class="project-grid-container">
+                        <div class="projects-header">
+                            <h4>Featured Github Repositories</h4>
+                            <hr>
+                        </div>
+                        <a class="project-link" href="https://github.com/gavinuhran/Calculator-GUI" target="_blank">
+                            <div class="project1 project-container">
+                                <div class="project-image">
+                                    <img class="repo-icon" src="{% static 'images/projectIcons/calculatorGUI-icon.png' %}" alt="Calculator GUI Icon">
+                                </div>
+                                <div class="project-title">
+                                    <h5>Calculator GUI</h5>
+                                </div>
+                                <div class="project-lang">
+                                    <h6>Python/Tkinter</h6>
+                                </div>
+                                <div class="project-desc">
+                                    <p class="project-desc">Calculator GUI is a typical 4-function calculator. The GUI is supported through the Python library Tkinter. The back-end processes have a heavy emphasis on recursion.</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="project-link" href="https://github.com/gavinuhran/Illinois-COVID-19-Data-Visualization"  target="_blank">
+                            <div class="project2 project-container">
+                                <div class="project-image">
+                                    <img class="repo-icon" src="{% static 'images/projectIcons/covidTracker-icon.png' %}" alt="Illinois COVID-19 Tracker Icon">
+                                </div>
+                                <div class="project-title">
+                                    <h5>IL COVID-19 Curve</h5>
+                                </div>
+                                <div class="project-lang">
+                                    <h6>Python/Jupyter Notebooks</h6>
+                                </div>
+                                <div class="project-desc">
+                                    <p class="project-desc">A data visualization of the change in COVID-19 cases in Illinois by day. All data is from the Illinois Department of Public Health.</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="project-link" href="https://github.com/gavinuhran/Tetris" target="_blank">
+                            <div class="project3 project-container">
+                                <div class="project-image">
+                                    <img class="repo-icon" src="{% static 'images/projectIcons/tetris-icon.png' %}" alt="Tetris Icon">
+                                </div>
+                                <div class="project-title">
+                                    <h5>Tetris</h5>
+                                </div>
+                                <div class="project-lang">
+                                    <h6>Java</h6>
+                                </div>
+                                <div class="project-desc">
+                                    <p class="project-desc">A rendition of the popular arcade game "Tetris". The game is heavily dependent on object-oriented programming.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-body h-75">
+                    <footer>
+                        <a href="#top">
+                            <h6 class="footer-text">Return to Top</h6>
+                        </a>
+                    </footer>
                 </div>
             </div>
         </div>
         <br>
     </div>
 </body>
+
 </html>
