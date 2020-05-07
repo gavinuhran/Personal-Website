@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gavin Uhran</title>
+    <link href="{% static '/css/projects.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static '/css/navbar.css' %}" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div id="top" class="row">
+            <div class="col-md-12">
+                <div class="topnav">
+                    <a href="/" class="active"><strong>Gavin Uhran's Portfolio</strong></a>
+                    <a href="projects/" class="active">Projects</a>
+                </div>
+            </div>
+        </div>
+        <div id="projects-list" class="row">
+            <div class="col-md-12">
+                <div class="card card-body h-100">
+                    <h4>Projects</h4>
+                    <br>
+                    <div class="project-list-container">
+                        <div class="project">
+                            <h5 class="project-title">Calculator GUI</h5>
+                            <p class="project-lang">Python/Tkinter</p>
+                            <p class="project-desc">Calculator GUI is a typical 4-function calculator. The GUI is supported through the Python library Tkinter. The back-end processes have a heavy emphasis on recursion.</p>
+                            <p class="project-update">April 30, 2020</p>
+                        </div>
+                        <div class="project">
+                            <h5 class="project-title">Illinois COVID-19 Curve</h5>
+                            <p class="project-lang">Python/Jupyter Notebooks</p>
+                            <p class="project-desc">A data visualization of the change in COVID-19 cases in Illinois by day. All data is from the Illinois Department of Public Health.</p>
+                            <p class="project-update">April 16, 2020</p>
+                        </div>
+                        <div class="project">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

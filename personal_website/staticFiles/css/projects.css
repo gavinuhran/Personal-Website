@@ -1,0 +1,38 @@
+.projects-list-container {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: auto;
+    grid-row-gap: 8%;
+    align-items: center;
+    justify-items: center;
+}
+.project {
+    height: 10vh;
+    display: grid;
+    grid-template-columns: 15% 10% 50% 10%;
+    grid-column-gap: 5%;
+    align-items: center;
+    justify-items: left;
+    border-top: 1px solid lightgray;
+    grid-template-areas:
+        "title lang desc update";
+}
+.project-title {
+    grid-area: title;
+    text-align: left;
+    word-wrap: break-word;
+}
+.project-lang {
+    grid-area: lang;
+    padding-top: 8%;
+    font-style: italic;
+    word-wrap: break-word;
+}
+.project-desc {
+    grid-area: desc;
+    padding-top: 2%;
+    word-wrap: break-word;
+}
+.project-update {
+    grid-area: update;
+}
