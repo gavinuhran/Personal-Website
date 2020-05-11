@@ -35,30 +35,16 @@
                         <hr>
                     </div>
                     <div class="project-list-container">
-                        <a class="project-link" href="https://github.com/gavinuhran/Calculator-GUI" target="_blank">
+                        {% for project in projects %}
+                        <a class="project-link" href="{{ project.url }}" target="_blank">
                             <div class="project">
-                                <h5 class="project-title">Calculator GUI</h5>
-                                <p class="project-lang">Python/Tkinter</p>
-                                <p class="project-desc">Calculator GUI is a typical 4-function calculator. The GUI is supported through the Python library Tkinter. The back-end processes have a heavy emphasis on recursion.</p>
-                                <p class="project-update">April 30, 2020</p>
+                                <h5 class="project-title">{{ project.title }}</h5>
+                                <p class="project-lang">{{ project.lang }}</p>
+                                <p class="project-desc">{{ project.desc }}</p>
+                                <p class="project-update">{{ project.date }}</p>
                             </div>
                         </a>
-                        <a class="project-link" href="https://github.com/gavinuhran/Illinois-COVID-19-Data-Visualization"  target="_blank">
-                            <div class="project">
-                                <h5 class="project-title">Illinois COVID-19 Curve</h5>
-                                <p class="project-lang">Python/Jupyter Notebooks</p>
-                                <p class="project-desc">A data visualization of the change in COVID-19 cases in Illinois by day. All data is from the Illinois Department of Public Health.</p>
-                                <p class="project-update">April 16, 2020</p>
-                            </div>
-                        </a>
-                        <a class="project-link" href="https://github.com/gavinuhran/Tetris" target="_blank">
-                            <div class="project">
-                                <h5 class="project-title">Tetris</h5>
-                                <p class="project-lang">Java</p>
-                                <p class="project-desc">A rendition of the popular arcade game "Tetris". The game is heavily dependent on object-oriented programming.</p>
-                                <p class="project-update">May 14, 2018</p>
-                            </div>
-                        </a>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
