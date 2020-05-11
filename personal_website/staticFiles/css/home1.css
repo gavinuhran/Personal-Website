@@ -35,7 +35,7 @@ h3, h4, h6, p {
     height: 40px;
 }
 .social:hover {
-    border: 2px solid #edf2f4;
+    border: 2px solid #E3EDF0;
 }
 .repo-icon {
     width: 100%;
@@ -83,7 +83,7 @@ h3, h4, h6, p {
     padding: 5%;
 }
 .project-container:hover {
-    background-color: #edf2f4;
+    background-color: #E3EDF0;
     border-radius: 30px;
     box-shadow: 0px 10px 18px #2b2d42;
 }
