@@ -1,41 +1,48 @@
+.card {
+    background-color: #E3EDF0!important;
+}
 #profile-wrapper {
     text-align: center;
 }
-
+h3 {
+    text-transform: uppercase;
+}
+h3, h4, h6, p {
+    color: #2b2d42;
+    font-family: Jost;
+}
 #profile-pic {
-    width: 150px;
+    width: 80%;
     height: auto;
     border-radius: 50%;
     margin-left: auto;
     margin-right: auto;
 }
-
-ul {
+.social-links {
+    position: relative;
+    transform: translate(27%, 0);
+    margin: 0;
     padding: 0;
-    list-style-type: none;
+    list-style: none;
 }
-
-.social-links ul, li {
-    list-style-type: none;
+.social-links li {
     display: inline-block;
-    width: 23%;
+    width: 10%;
     text-align: center;
 }
-
 .social {
     width: 40px;
     height: 40px;
 }
 .social:hover {
-    border: 2px solid #ffffff;
+    border: 2px solid #edf2f4;
 }
-
 .repo-icon {
     width: 100%;
     height: auto;
     border-radius: 10%;
+    box-shadow: 0px 5px 9px #2b2d42;
 }
-
 .project-grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -48,7 +55,6 @@ ul {
         "project1 project2 project3"
         "footer footer footer";
 }
-
 .projects-header {
     grid-area: header;
 }
@@ -64,22 +70,22 @@ ul {
 }
 .project-container {
     grid-area: project1;
+    min-width: 200px;
     display: grid;
     grid-template-areas:
         "image"
         "title"
         "lang"
         "desc";
-    grid-template-rows: 275px 32px 24px 150px;
+    grid-template-rows: 280px 32px 24px 150px;
     grid-row-gap: 2%;
     justify-items: center;
-    border: 2px solid #ffffff;
     padding: 5%;
 }
 .project-container:hover {
     background-color: #edf2f4;
     border-radius: 30px;
-    border: 2px solid #8d99ae;
+    box-shadow: 0px 10px 18px #2b2d42;
 }
 .project1 {
     grid-area: project1;
@@ -94,6 +100,7 @@ ul {
     grid-area: image;
 }
 .project-title {
+    font-family: Jost;
     grid-area: title;
 }
 .project-title h5 {
@@ -108,12 +115,5 @@ ul {
 }
 .project-desc {
     grid-area: desc;
-}
-
-footer {
-    padding-bottom: 1%;
     text-align: center;
-}
-.footer-text {
-    font-size: 16px;
 }

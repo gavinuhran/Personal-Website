@@ -5,21 +5,28 @@
 <head>
     <title>Gavin Uhran</title>
     <link href="{% static '/css/home.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static '/css/navbar.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static '/css/nav.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static '/css/footer.css' %}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
-<body>
-    <div class="container">
-        <div id="top" class="row">
-            <div class="col-md-12">
-                <div class="topnav">
-                    <a href="" class="active"><strong>Gavin Uhran's Portfolio</strong></a>
-                    <a href="projects" class="active">Projects</a>
-                </div>
-            </div>
+<body style="background-color: #687288;">
+    <header>
+        <div class="nav-container">
+            <a href="/">
+                <img class="logo" src="{% static 'images/logo.png' %}" alt="Logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a class="nav-home" href="/">Home</a></li>
+                    <li><a class="nav-projects" href="/projects/">Projects</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
+    <div class="container">
         <div class="row">
             <div class="col-md-3">
                 <div id="profile-wrapper" class="card card-body h-100">
@@ -32,12 +39,12 @@
             </div>
             <div class="col-md-9">
                 <div class="card card-body h-100">
-                    <h4>About Me</h4>
+                    <h3>About Me</h3>
                     <hr>
                     <p>I am currently working toward a degree in Computer Science from the College of Engineering at the University of Notre Dame. I am seeking an internship or other opportunity that will allow me to use my collaboration and problem solving skills to improve and develop my abilities in the field of Computer Science.</p>
 
                     <p>My strengths are collaboration, problem-solving, discipline, and determination to improve. These attributes have been built through my studies, past experience, involvement in drumline, and the process of earning my Eagle Scout rank in Boy Scouts. I am excited to put my full effort into a career in software engineering!</p>
-                    <h4>Socials</h4>
+                    <h3>Socials</h3>
                     <hr>
                     <ul class="social-links">
                         <li>
@@ -70,7 +77,7 @@
                 <div class="card card-body h-100">
                     <div class="project-grid-container">
                         <div class="projects-header">
-                            <h4>Featured Github Repositories</h4>
+                            <h3>Featured GitHub Repositories</h3>
                             <hr>
                         </div>
                         <a class="project-link" href="https://github.com/gavinuhran/Calculator-GUI" target="_blank">
@@ -130,7 +137,7 @@
             <div class="col-md-12">
                 <div class="card card-body h-75">
                     <footer>
-                        <a href="#top">
+                        <a href="/">
                             <h6 class="footer-text">Return to Top</h6>
                         </a>
                     </footer>

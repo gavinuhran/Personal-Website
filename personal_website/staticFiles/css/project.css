@@ -1,24 +1,36 @@
+.card {
+    background-color: #edf2f4!important;
+}
+h5, h6, p {
+    color: #2b2d42;
+    font-family: Jost;
+}
 .projects-list-container {
     display: grid;
     grid-template-rows: repeat(3, auto);
     grid-template-columns: auto;
     grid-row-gap: 8%;
     align-items: center;
-    justify-items: center;
+    justify-items: cesnter;
+}
+.projects-title-container {
+    text-align: center;
 }
 .project {
     height: 10vh;
+    padding-left: 1%;
+    padding-right: 1%;
     display: grid;
-    grid-template-columns: 15% 10% 50% 10%;
+    grid-template-columns: 15% 10% 48% 12%;
     grid-column-gap: 5%;
     align-items: center;
     justify-items: left;
-    border-top: 1px solid lightgray;
     grid-template-areas:
         "title lang desc update";
 }
 .project-title {
     grid-area: title;
+    padding-left: 5%;
     text-align: left;
     word-wrap: break-word;
 }
@@ -35,4 +47,16 @@
 }
 .project-update {
     grid-area: update;
+}
+.project-link {
+    color: black;
+}
+.project-link:hover {
+    color: black;
+    text-decoration: none;
+}
+.project:hover {
+    background-color: #edf2f4;
+    border-radius: 15px;
+    box-shadow: 0px 10px 18px #2b2d42;
 }
