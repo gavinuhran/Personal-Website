@@ -30,7 +30,9 @@
         <div class="row">
             <div class="col-md-3">
                 <div id="profile-wrapper" class="card card-body h-100">
-                    <img id="profile-pic" src="{% static 'images/headshot.jpg' %}" alt="Profile Picture">
+                    {% for profilePicture in profilePictures %}
+                    <img id="profile-pic" src="{{ profilePicture.picture.url }}" alt="Profile Picture">
+                    {% endfor %}
                     <hr>
                     <h4>Gavin Uhran</h4>
                     <p>19 y/o Computer Science major at the University of Notre Dame</p>
@@ -48,24 +50,32 @@
                     <hr>
                     <ul class="social-links">
                         <li>
-                            <a href="https://linkedin.com/in/gavinuhran" target="_blank">
+                            {% for link in linkedinLinks %}
+                            <a href="{{ link.url }}" target="_blank">
                                 <img class="social" src="{% static 'images/mediaFiles/linkedin.png' %}" alt="LinkedIn Icon">
                             </a>
+                            {% endfor %}
                         </li>
                         <li>
-                            <a href="https://twitter.com/gavinuhran" target="_blank">
+                            {% for link in twitterLinks %}
+                            <a href="{{ link.url }}" target="_blank">
                                 <img class="social" src="{% static 'images/mediaFiles/twitter.png' %}" alt="Twitter Icon">
                             </a>
+                            {% endfor %}
                         </li>
                         <li>
-                            <a href="https://instagram.com/gavinuhran" target="_blank">
+                            {% for link in instagramLinks %}
+                            <a href="{{ link.url }}" target="_blank">
                                 <img class="social" src="{% static 'images/mediaFiles/instagram.png' %}" alt="Instagram Icon">
                             </a>
+                            {% endfor %}
                         </li>
                         <li>
-                            <a href="https://github.com/gavinuhran" target="_blank">
+                            {% for link in githubLinks %}
+                            <a href="{{ link.url }}" target="_blank">
                                 <img class="social" src="{% static 'images/mediaFiles/github.png' %}" alt="Github Icon">
                             </a>
+                            {% endfor %}
                         </li>
                     </ul>
                 </div>
@@ -80,54 +90,24 @@
                             <h3>Featured GitHub Repositories</h3>
                             <hr>
                         </div>
-                        <a class="project-link" href="https://github.com/gavinuhran/Calculator-GUI" target="_blank">
+                        {% for project in featuredProjects %}
+                        <a class="project-link" href="{{ project.url }}" target="_blank">
                             <div class="project1 project-container">
                                 <div class="project-image">
-                                    <img class="repo-icon" src="{% static 'images/projectIcons/calculatorGUI-icon.png' %}" alt="Calculator GUI Icon">
+                                    <img class="repo-icon" src="{{ project.thumbnail.url }}" alt="{{ project.title }}">
                                 </div>
                                 <div class="project-title">
-                                    <h5>Calculator GUI</h5>
+                                    <h5>{{ project.title }}</h5>
                                 </div>
                                 <div class="project-lang">
-                                    <h6>Python/Tkinter</h6>
+                                    <h6>{{ project.lang }}</h6>
                                 </div>
                                 <div class="project-desc">
-                                    <p class="project-desc">Calculator GUI is a typical 4-function calculator. The GUI is supported through the Python library Tkinter. The back-end processes have a heavy emphasis on recursion.</p>
+                                    <p class="project-desc">{{ project.desc }}</p>
                                 </div>
                             </div>
                         </a>
-                        <a class="project-link" href="https://github.com/gavinuhran/Illinois-COVID-19-Data-Visualization"  target="_blank">
-                            <div class="project2 project-container">
-                                <div class="project-image">
-                                    <img class="repo-icon" src="{% static 'images/projectIcons/covidTracker-icon.png' %}" alt="Illinois COVID-19 Tracker Icon">
-                                </div>
-                                <div class="project-title">
-                                    <h5>IL COVID-19 Curve</h5>
-                                </div>
-                                <div class="project-lang">
-                                    <h6>Python/Jupyter Notebooks</h6>
-                                </div>
-                                <div class="project-desc">
-                                    <p class="project-desc">A data visualization of the change in COVID-19 cases in Illinois by day. All data is from the Illinois Department of Public Health.</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a class="project-link" href="https://github.com/gavinuhran/Tetris" target="_blank">
-                            <div class="project3 project-container">
-                                <div class="project-image">
-                                    <img class="repo-icon" src="{% static 'images/projectIcons/tetris-icon.png' %}" alt="Tetris Icon">
-                                </div>
-                                <div class="project-title">
-                                    <h5>Tetris</h5>
-                                </div>
-                                <div class="project-lang">
-                                    <h6>Java</h6>
-                                </div>
-                                <div class="project-desc">
-                                    <p class="project-desc">A rendition of the popular arcade game "Tetris". The game is heavily dependent on object-oriented programming.</p>
-                                </div>
-                            </div>
-                        </a>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
