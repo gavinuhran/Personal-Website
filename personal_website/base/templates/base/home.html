@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <title>Gavin Uhran</title>
-    <link href="{% static '/css/home1.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static '/css/home.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static '/css/nav.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static '/css/footer.css' %}" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
@@ -30,22 +30,23 @@
         <div class="row">
             <div class="col-md-3">
                 <div id="profile-wrapper" class="card card-body h-100">
-                    {% for profilePicture in profilePictures %}
-                    <img id="profile-pic" src="{{ profilePicture.picture.url }}" alt="Profile Picture">
-                    {% endfor %}
+                    {% for profile in profiles %}
+                    <img id="profile-pic" src="{{ profile.picture.url }}" alt="Profile Picture">
                     <hr>
                     <h4>Gavin Uhran</h4>
-                    <p>19 y/o Computer Science major at the University of Notre Dame</p>
-                    <p>Ever working on improving my chops in silence</p>
+                    <p>{{ profile.description1 }}</p>
+                    <p>{{ profile.description2 }}</p>
+                    {% endfor %}
                 </div>
             </div>
             <div class="col-md-9">
                 <div class="card card-body h-100">
                     <h3>About Me</h3>
                     <hr>
-                    <p>I am currently working toward a degree in Computer Science from the College of Engineering at the University of Notre Dame. I am seeking an internship or other opportunity that will allow me to use my collaboration and problem solving skills to improve and develop my abilities in the field of Computer Science.</p>
-
-                    <p>My strengths are collaboration, problem-solving, discipline, and determination to improve. These attributes have been built through my studies, past experience, involvement in drumline, and the process of earning my Eagle Scout rank in Boy Scouts. I am excited to put my full effort into a career in software engineering!</p>
+                    {% for aboutMe in aboutMes %}
+                    <p>{{ aboutMe.aboutMe1 }}</p>
+                    <p>{{ aboutMe.aboutMe2 }}</p>
+                    {% endfor %}
                     <h3>Socials</h3>
                     <hr>
                     <ul class="social-links">
@@ -85,11 +86,11 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card card-body h-100">
+                    <div class="projects-header">
+                        <h3>Featured GitHub Repositories</h3>
+                        <hr>
+                    </div>
                     <div class="project-grid-container">
-                        <div class="projects-header">
-                            <h3>Featured GitHub Repositories</h3>
-                            <hr>
-                        </div>
                         {% for project in featuredProjects %}
                         <a class="project-link" href="{{ project.url }}" target="_blank">
                             <div class="project1 project-container">

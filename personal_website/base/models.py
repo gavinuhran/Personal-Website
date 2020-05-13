@@ -2,8 +2,14 @@ from django.db import models
 import datetime
 
 # Create your models here.
-class ProfilePicture(models.Model):
+class Profile(models.Model):
     picture = models.ImageField(default='default.png', blank=True)
+    description1 = models.TextField(default="placeholder")
+    description2 = models.TextField(default="placeholder")
+
+class AboutMe(models.Model):
+    aboutMe1 = models.TextField()
+    aboutMe2 = models.TextField()
 
 class LinkedIn(models.Model):
     url = models.TextField(default='https://linkedin.com/in/gavinuhran/')
