@@ -1,0 +1,146 @@
+.card {
+    background-color: #E3EDF0!important;
+}
+#profile-wrapper {
+    text-align: center;
+    min-width: 180px;
+}
+h3 {
+    text-transform: uppercase;
+}
+h3, h4, h6, p {
+    color: #2b2d42;
+    font-family: Jost;
+}
+#profile-pic {
+    width: 80%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.social-links {
+    position: relative;
+    transform: translate(27%, 0);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.social-links li {
+    display: inline-block;
+    width: 10%;
+    text-align: center;
+}
+.social {
+    width: 40px;
+    height: 40px;
+}
+.social:hover {
+    border: 2px solid #E3EDF0;
+}
+.repo-icon {
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
+    box-shadow: 0px 5px 9px #2b2d42;
+}
+.project-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 8%;
+    grid-row-gap: 0;
+    align-items: center;
+    justify-items: center;
+    grid-template-areas:
+        "project1 project2 project3";
+}
+@media screen and (max-width: 1199px) {
+    .project-grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 0;
+        grid-row-gap: 0%;
+        align-items: center;
+        justify-items: center;
+        grid-template-areas:
+        "project1 project2"
+        "project3 project3";
+    }
+}
+@media screen and (max-width: 780px) {
+    .project-grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 0;
+        grid-row-gap: 1%;
+        align-items: center;
+        justify-items: center;
+        grid-template-areas:
+        "project1"
+        "project2"
+        "project3";
+    }
+}
+.projects-header {
+    text-align: center;
+}
+.projects-header h4 {
+    font-size: 28px;
+}
+.project-link {
+    color: black;
+}
+.project-link:hover {
+    color: black;
+    text-decoration: none;
+}
+.project-container {
+    grid-area: project1;
+    width: 300px;
+    display: grid;
+    grid-template-areas:
+        "image"
+        "title"
+        "lang"
+        "desc";
+    grid-template-rows: 280px 32px 24px 150px;
+    grid-row-gap: 2%;
+    justify-items: center;
+    padding: 5%;
+}
+.project-container:hover {
+    background-color: #E3EDF0;
+    border-radius: 30px;
+    box-shadow: 0px 10px 18px #2b2d42;
+}
+.project1 {
+    grid-area: project1;
+}
+.project2 {
+    grid-area: project2;
+}
+.project3 {
+    grid-area: project3;
+}
+.project-image {
+    grid-area: image;
+}
+.project-title {
+    font-family: Jost;
+    grid-area: title;
+}
+.project-title h5 {
+    font-size: 24px;
+}
+.project-lang {
+    grid-area: lang;
+}
+.project-lang h6 {
+    font-size: 16px;
+    font-style: italic;
+}
+.project-desc {
+    grid-area: desc;
+    text-align: center;
+}
