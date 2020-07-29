@@ -35,7 +35,6 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]', '*']
 # Application definition
 
 INSTALLED_APPS = [
-    'whitenoise.runserver_nostatic',
     'base',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -129,7 +128,7 @@ STATIC_URL = '/staticFiles/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'staticFiles')
