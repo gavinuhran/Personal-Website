@@ -125,9 +125,9 @@ USE_TZ = True
 
 #STATIC_HOST = 'https://d1wh6hiyc9dtto.cloudfront.net' if not DEBUG else ''
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticFiles')
-STATIC_URL = '/staticFiles/' #STATIC_HOST + '/staticFiles/'
+STATIC_URL = STATIC_HOST + '/staticFiles/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/' #STATIC_HOST + '/media/'
+MEDIA_URL = STATIC_HOST + '/media/'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
