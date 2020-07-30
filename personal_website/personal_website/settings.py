@@ -27,7 +27,7 @@ SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = config('DEBUG', default=False, cast=bool)
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'online-portfolio-gavinuhran.herokuapp.com', 'https://online-portfolio-gavinuhran.herokuapp.com/']
 
