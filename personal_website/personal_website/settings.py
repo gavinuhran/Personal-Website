@@ -123,10 +123,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticFiles')
-STATIC_URL = '/staticFiles/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
+STATIC_HOST = 'https://d1wh6hiyc9dtto.cloudfront.net' if not DEBUG else ''
+#STATIC_ROOT = os.path.join(BASE_DIR, 'staticFiles')
+STATIC_URL = STATIC_HOST + '/staticFiles/'
+#MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = STATIC_HOST + '/media/'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
