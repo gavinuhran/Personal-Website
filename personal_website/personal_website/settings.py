@@ -27,7 +27,7 @@ SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = config('DEBUG', default=False, cast=bool)
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'online-portfolio-gavinuhran.herokuapp.com', 'https://online-portfolio-gavinuhran.herokuapp.com/']
 
@@ -124,9 +124,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_HOST = 'https://d1wh6hiyc9dtto.cloudfront.net' if not DEBUG else ''
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticFiles')
+STATIC_ROOT = STATIC_HOST + '/staticFiles/'
 STATIC_URL = STATIC_HOST + '/staticFiles/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = STATIC_HOST + '/media/'
 MEDIA_URL = STATIC_HOST + '/media/'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

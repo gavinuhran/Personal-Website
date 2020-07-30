@@ -1,9 +1,13 @@
 from django.db import models
 import datetime
+from django.core.files.storage import FileSystemStorage
+from django.conf import settings
+
+upload_storage = FileSystemStorage()
 
 # Create your models here.
 class Profile(models.Model):
-    picture = models.ImageField(default='default.png', blank=True)
+    picture = models.ImageField(default='default.png', blank=True, upload_to='media/profilePics', storage=upload_storage)
     description1 = models.TextField(default="placeholder")
     description2 = models.TextField(default="placeholder")
 
@@ -24,7 +28,7 @@ class GitHub(models.Model):
     url = models.TextField(default='https://github.com/gavinuhran/')
 
 class FeaturedProject(models.Model):
-    thumbnail = models.ImageField(default='default.png', blank=True)
+    thumbnail = models.ImageField(default='default.png', blank=True, upload_to='media/featuredProjectIcons', storage=upload_storage)
     url = models.TextField(default='https://github.com/gavinuhran/')
     title = models.CharField(max_length=100)
     lang = models.CharField(max_length=100)
