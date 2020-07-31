@@ -4,7 +4,7 @@ import datetime
 
 # Create your models here.
 class Profile(models.Model):
-    picture = models.ImageField(default='default.png', blank=True, upload_to='media/profilePics')
+    picture = models.ImageField(default='default.png', blank=True, upload_to='profilePics')
     description1 = models.TextField(default="placeholder")
     description2 = models.TextField(default="placeholder")
 
@@ -27,7 +27,7 @@ class GitHub(models.Model):
     url = models.TextField(default='https://github.com/gavinuhran/')
 
 class FeaturedProject(models.Model):
-    thumbnail = models.ImageField(default='default.png', blank=True, upload_to='media/featuredProjectIcons')
+    thumbnail = models.ImageField(default='default.png', blank=True, upload_to='featuredProjectIcons')
     title = models.CharField(max_length=100)
     lang = models.CharField(max_length=100)
     desc = models.TextField()
