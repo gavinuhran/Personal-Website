@@ -27,9 +27,9 @@ SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = config('DEBUG', default=False, cast=bool)
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'online-portfolio-gavinuhran.herokuapp.com', 'https://online-portfolio-gavinuhran.herokuapp.com/']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'online-portfolio-gavinuhran.herokuapp.com']
 
 
 # Application definition
@@ -47,7 +47,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -129,8 +128,6 @@ STATIC_ROOT = STATIC_HOST + '/staticFiles/'
 STATIC_URL = STATIC_HOST + '/staticFiles/'
 MEDIA_ROOT = STATIC_HOST + '/media/'
 MEDIA_URL = STATIC_HOST + '/media/'
-
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'staticFiles')
